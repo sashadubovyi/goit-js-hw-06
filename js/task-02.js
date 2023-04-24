@@ -1,4 +1,3 @@
-// (1)
 const ingredients = [
   'Potatoes',
   'Mushrooms',
