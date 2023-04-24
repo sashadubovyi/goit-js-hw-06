@@ -9,6 +9,14 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function reateBoxes(amount) {
-  
+function createBoxes(amount) {
+  let boxSize = 30;
+
+  for (let i = 0; i < array.length; i+=1) {
+    const createDiv = document.createElement('div');
+    createDiv.style.width = `${boxSize}px`;
+    createDiv.style.height = `${boxSize}px`;
+    createDiv.style.backgroundColor = getRandomHexColor();
+    
+  }
 }

@@ -1,20 +1,23 @@
-const loginForm = document.querySelector('.login-form');
+const loginForm = document.querySelector(".login-form");
 // варіант №1
-loginForm.addEventListener('submit', handleSubmit);
+loginForm.addEventListener("submit", handleSubmit);
 
-function handleSubmit(event) { 
-    event.preventDefault();
-    const {
-        elements: { email, password } } = event.currentTarget;
-    
-    if (email.value === '' || password.value === '') { 
-        return alert('Enter all props!');
-    }
-    
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
-    event.currentTarget.reset();
-    }
-    
+function handleSubmit(event) {
+  event.preventDefault();
+  const { email, password } = event.currentTarget.elements;
+
+  if (email.value === "" || password.value === "") {
+    return alert("Enter all props!");
+  }
+
+  const enteredData = {
+    email: email.value,
+    password: password.value,
+  };
+  console.log(enteredData);
+
+  event.currentTarget.reset();
+}
 
 // варіант №2
 // loginForm.addEventListener('submit', e => {
