@@ -8,20 +8,12 @@ const ingredients = [
 ];
 
 const ulIngredients = document.querySelector("#ingredients");
-// console.log(ulIngredients);
 
-ingredients.map((ingredient) => {
+const liElements = ingredients.map((ingredient) => {
   const liNew = document.createElement("li");
   liNew.classList.add("item");
   liNew.textContent = ingredient;
-  // console.log(liNew);
-  ulIngredients.append(liNew);
+  return liNew;
 });
 
-// const ingridient = ingredients.forEach((ingredient) => {
-//   const liNew = document.createElement('li');
-//   liNew.classList.add('item');
-//   liNew.textContent = ingredient;
-//   // console.log(liNew);
-//   ulIngredients.append(liNew);
-// })
+ulIngredients.append(...liElements);
